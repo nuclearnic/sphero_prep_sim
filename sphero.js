@@ -4,8 +4,8 @@
 module.exports =
 {
     // iniitial state
-    x_pos: 0,
-    y_pos: 0,
+    xPos: 0,
+    yPos: 0,
     color: "red",
     // mimic Sphero's connect method
     connect: function(work) {
@@ -13,31 +13,37 @@ module.exports =
         work();
     },
     readOdometer: function () {
-        return [this.x_pos, this.y_pos];
+        console.log("receiving sphero's coordinates from the odometer...");
+        return [this.xPos.toFixed(2), this.yPos.toFixed(2)];
     },
     getColor: function () {
         return this.color;
     },
     roll: function (distance, direction) {
-        console.log('you ....')
+        console.log('moving sphero ' + distance + 'units in the ' + direction + 'direction...')
         var rads = direction * ( Math.PI / 180 );
-        this.x_pos += distance * Math.cos(rads);
-        this.y_pos += distance * Math.sin(rads);
+        this.xPos += distance * Math.cos(rads);
+        this.yPos += distance * Math.sin(rads);
     },
     setColor: function (color) {
+        console.log("changing sphero's color to " + color + '...');
         this.color = color;
     },
-    assertState: function (x_pos, y_pos, color) {
-        // WIP
+    assertState: function (xPos, yPos, color) {
+        console.log('asserting that sphero is ' + color + ' and at' + '[' + xPos + ',' + yPos + ']')
         if (this.color == color) {
             console.log('color matches');
         } else {
             console.log("color doesn't match");
         }
-        if (this.readOdometer == [x_pos, y_pos]) {
+        var position = this.readOdometer();
+        if (position[0] == xPos.toFixed(2) && position[1] == yPos.toFixed(2)) {
             console.log('position matches');
         } else {
-            console.log("position doesn't matche");
+            console.log("position doesn't match");
+            console.log('Odometer reading is: ' + position);
+            // console.log(xPos.toFixed(2) + ' ' +  yPos.toFixed(2))
+            console.log(['expecting Sphero at: ' + xPos.toFixed(2), yPos.toFixed(2)]);
         }
     }
 };

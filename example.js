@@ -22,4 +22,8 @@ sphero.connect(function() {
   // Use the Odometer to find Sphero's position in format [x,y]
   var position = sphero.readOdometer();
   console.log(position);
+
+  // Check if Sphero's state is what is expected
+  sphero.assertState(0, 200, 'Blue')
+
 });
