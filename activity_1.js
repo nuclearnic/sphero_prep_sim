@@ -1,9 +1,9 @@
-var Orb = require('./orb.js');
+var sphero = require('./sphero.js');
 
-Orb.connect(function() {
+sphero.connect(function() {
   // your code goes here
 
   // verify
-  // Orb.assertState
+  // sphero.assertState
 });
 

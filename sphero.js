@@ -1,5 +1,4 @@
-// NAME IT SPHERO
-// The Orb object below mimics *some* of the basic commands you have
+// The sphero object below mimics *some* of the basic commands you have
 // access to when using the sphero.js library
 
 module.exports =
@@ -13,27 +12,22 @@ module.exports =
         console.log("let's roll!");
         work();
     },
-    readOdometer: function ()
-    {
-        return [ this.x_pos, this.y_pos ];
+    readOdometer: function () {
+        return [this.x_pos, this.y_pos];
     },
-    getColor: function ()
-    {
+    getColor: function () {
         return this.color;
     },
-    roll: function ( distance, direction )
-    {
+    roll: function (distance, direction) {
         console.log('you ....')
         var rads = direction * ( Math.PI / 180 );
         this.x_pos += distance * Math.cos(rads);
         this.y_pos += distance * Math.sin(rads);
     },
-    setColor: function (color)
-    {
+    setColor: function (color) {
         this.color = color;
     },
-    assertState: function (x_pos, y_pos, color)
-    {
+    assertState: function (x_pos, y_pos, color) {
         // WIP
         if (this.color == color) {
             console.log('color matches');
