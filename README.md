@@ -1,7 +1,7 @@
 ### Prep Activity: Learn to Move Sphero Programmatically
 
-<i> Short overview of scope and purpose goes here</i>
+<i> Short overview of scope and purpose goes here </i>
 
-* Activity #1 goes here
+* Change Sphero's color and move him programmatically
 
-* Activity #2 goes here
+* Sphero's initial position is randomized: Find Sphero's coordinates with the Odomoter and move him to <b>(0,0)</b>.
