@@ -22,10 +22,6 @@ If you want explore the SDK itself then have a look here: https://github.com/orb
 
 <b>TIP:</b> See `example.js` for all of the commands required to finish the two activities.
 
-
-
-
-
 <!-- ### Installing Node JS
 
 There's nothing fancy going on here, so you only need `node` to run these examples. If you don't have node installed, then have a look below. If your OS is not included, then detailed instructions are available [here](https://github.com/nodejs/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions). If you have any issues with the installation then reach out to us on Slack and we'll assist :).

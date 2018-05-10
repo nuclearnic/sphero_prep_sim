@@ -8,7 +8,7 @@ sphero.connect(function() {
 
 
   // let's check your code...
-  if (sphero.assertState(0, 200, 'Blue')) {
+  if (sphero.assertState(0, 200, 'blue')) {
     console.log("Congrats, you've passed Activity #1!")
   } else {
     console.log("Woops! Sphero isn't quite there yet...");

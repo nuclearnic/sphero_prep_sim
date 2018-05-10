@@ -13,7 +13,7 @@ sphero.connect(function() {
   console.log("Sphero's current color is: " + sphero.getColor());
 
   // Change Sphero's color
-  sphero.setColor("Blue")
+  sphero.setColor('blue');
 
   // Verify Sphero's color has changed
   console.log("Sphero's current color is: " + sphero.getColor());
@@ -22,6 +22,5 @@ sphero.connect(function() {
   console.log(sphero.readOdometer());
 
   // Check if Sphero's state is what is expected
-  sphero.assertState(0, 200, 'Blue')
-
+  console.log(sphero.assertState(0, 200, 'blue'));
 });
